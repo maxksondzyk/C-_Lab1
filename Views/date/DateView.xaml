@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Lab_1_Ksondzyk.Views.date.DateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab_1_Ksondzyk.Views.date"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="11*"></RowDefinition>
+            <RowDefinition Height="11*"></RowDefinition>
+            <RowDefinition Height="11*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="40"> 
+            <Run FontSize="28">Оберіть дату вашого народження</Run>
+        </TextBlock>
+        <DatePicker Name="PickDate" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" DisplayDateStart="1/1/1880" SelectedDateChanged="SelectedDateChanged" Height="24"></DatePicker>
+        <TextBlock FontSize ="22" Grid.Row ="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0" x:Name="SelectedDateTextBox" Height="30"/>
+        <TextBlock FontSize ="22" Grid.Row ="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0" x:Name="WesternZodiac" Height="30"/>
+        <TextBlock FontSize ="22" Grid.Row ="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0" x:Name="EasternZodiac" Height="30"/>
+
+    </Grid>
+</UserControl>
